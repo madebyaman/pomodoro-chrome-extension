@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Pomodoro Extension",
+  "version": "1.0.0",
+  "description": "Pomodoro Extension to help you work productively.",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
