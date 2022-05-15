@@ -1,1 +1,5 @@
-console.log('Hello from the background script');
+let time = 0;
+
+setInterval(() => {
+  time += 1;
+}, 1000);
