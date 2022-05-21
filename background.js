@@ -11,5 +11,11 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     chrome.action.setBadgeText({
       text: `${time + 1}`,
     });
+    if (time % 10000 == 0) {
+      this.registration.showNotification('Chrome Pomodoro Extension', {
+        body: '10 seconds has passed',
+        icon: 'icon.png',
+      });
+    }
   });
 });
