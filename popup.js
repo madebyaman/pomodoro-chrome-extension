@@ -20,3 +20,26 @@ setInterval(() => {
 chrome.storage.sync.get(['name'], (res) => {
   if (res.name) nameElement.textContent = `Your name is: ${res.name}`;
 });
+
+const startBtn = document.getElementById('start');
+const stopButton = document.getElementById('stop');
+const resetBtn = document.getElementById('reset');
+
+startBtn.addEventListener('click', () => {
+  chrome.storage.local.set({
+    isRunning: true,
+  });
+});
+
+stopButton.addEventListener('click', () => {
+  chrome.storage.local.set({
+    isRunning: false,
+  });
+});
+
+resetBtn.addEventListener('click', () => {
+  chrome.storage.local.set({
+    isRunning: true,
+    timer: 0,
+  });
+});
